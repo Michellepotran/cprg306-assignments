@@ -74,7 +74,6 @@ export default function ItemList() {
       };
     return (
         <>
-        <h1>Item List</h1>
         <Item
           name={item1.name}
           quantity={item1.quantity}
