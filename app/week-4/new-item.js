@@ -25,7 +25,7 @@ export default function NewItem() {
         console.log(item);
 
         // Display an alert with the current state of name, quantity, and category. 
-        alert(`Name: ${name}, Quantity: ${quantity}, Category: ${category}`);
+        alert(`Name: ${name} \nQuantity: ${quantity} \nCategory: ${category}`);
 
         // Resetting the state variables to their initial values. 
         setName("");
@@ -36,49 +36,57 @@ export default function NewItem() {
 
     
     return (
-        <div>
+        <div class= "flex justify-center items-center bg-gray-800 rounded-lg max-w-xs mx-auto m-4 p-4">
             <form onSubmit={handleSubmit}>
-                <label>
-                    Name:
-                    <input 
+                <div class="flex justify-center items-center">
+                    <label>
+                    <input class="text-black rounded-lg p-2 m-2 w-full"
                     type="text" 
                     placeholder = "Item Name" 
                     value={name} 
                     onChange={(event) => setName(event.target.value)} 
                     required/> 
-                </label>
+                    </label>
+                </div>
                 <br />
-                <label>
-                    Quantity:
-                    <input 
+                <div class="flex justify-between">
+                  <label>
+                    <input class="text-black rounded-lg p-2 m-2 w-half"
                     type="number" 
                     min="1"
                     max="99"
                     value={quantity} 
                     onChange={(event) => setQuantity(Number(event.target.value))} 
                     required/>
-                </label>
+                </label>  
+                
                 <br />
+                
                 <label>
-                    Category:
-                    <select
-                    value={category}
-                    onChange={(event) => setCategory(event.target.value)}> 
-                    <option value="Produce">Produce</option>
-                    <option value="Dairy">Dairy</option>
-                    <option value="Bakery">Bakery</option>
-                    <option value="Meat">Meat</option>
-                    <option value="Frozen Foods">Frozen Foods</option>
-                    <option value="Canned Goods">Canned Goods</option>
-                    <option value="Dry Goods">Dry Goods</option>
-                    <option value="Beverages">Beverages</option>
-                    <option value="Snacks">Snacks</option>
-                    <option value="Household">Household</option>
-                    <option value="Other">Other</option>
-                    </select>
+                <select class="text-black rounded-lg p-2 m-2 w-half"
+                value={category}
+                placeholder="Category"
+                onChange={(event) => setCategory(event.target.value)}> 
+                <option class="text-black" value="Produce">Produce</option>
+                <option class="text-black"value="Dairy">Dairy</option>
+                <option class="text-black"value="Bakery">Bakery</option>
+                <option class="text-black"value="Meat">Meat</option>
+                <option class="text-black"value="Frozen Foods">Frozen Foods</option>
+                <option class="text-black"value="Canned Goods">Canned Goods</option>
+                <option class="text-black"value="Dry Goods">Dry Goods</option>
+                <option class="text-black"value="Beverages">Beverages</option>
+                <option class="text-black"value="Snacks">Snacks</option>
+                <option class="text-black"value="Household">Household</option>
+                <option class="text-black"value="Other">Other</option>
+                </select>
                 </label>
+                
+                </div>
                 <br />
-                <button type="submit"> Submit </button>
+                <div class="flex justify-center items-center">
+                    <button class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit"> Submit </button>
+                </div>
+                
             
             </form>
         </div>
