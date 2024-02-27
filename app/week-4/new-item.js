@@ -37,7 +37,7 @@ export default function NewItem() {
     
     return (
         <div class= "flex justify-center items-center bg-gray-800 rounded-lg max-w-xs mx-auto m-4 p-4">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}> 
                 <div class="flex justify-center items-center">
                     <label>
                     <input class="text-black rounded-lg p-2 m-2 w-full"
@@ -92,4 +92,3 @@ export default function NewItem() {
         </div>
     );
   }
-
