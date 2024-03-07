@@ -26,23 +26,19 @@ import items from './items.json';
     return (
       <>
         <div>
-          <button
-            onClick={handleSortByName}
-            style={{
-              backgroundColor: sortBy === 'name' ? 'lightblue' : 'inherit',
-            }}
-          >
-            Sort by Name
+          <button class = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          onClick={handleSortByName}>
+            Name
           </button>
-          <button
-            onClick={handleSortByCategory}
-            style={{
-              backgroundColor: sortBy === 'category' ? 'lightblue' : 'inherit',
-            }}
-          >
-            Sort by Category
+        <div> 
+
+        </div>
+          <button class = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          onClick={handleSortByCategory}>
+            Category
           </button>
         </div>
+        
         {items.map((item) => (
           <Item
             key={item.id}
