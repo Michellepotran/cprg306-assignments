@@ -1,3 +1,4 @@
+"use client";
 import { useUserAuth } from "../_utils/auth-context";
 import { Redirect } from "react-router-dom";
 
